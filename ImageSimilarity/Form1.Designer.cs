@@ -33,9 +33,13 @@
             this.btnResim1 = new System.Windows.Forms.Button();
             this.btnResim2 = new System.Windows.Forms.Button();
             this.btnKarsilastir = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSonuc = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.form1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.form2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -66,6 +70,7 @@
             this.btnResim1.TabIndex = 2;
             this.btnResim1.Text = "1. Resim";
             this.btnResim1.UseVisualStyleBackColor = true;
+            this.btnResim1.Click += new System.EventHandler(this.btnResim1_Click);
             // 
             // btnResim2
             // 
@@ -75,6 +80,7 @@
             this.btnResim2.TabIndex = 3;
             this.btnResim2.Text = "2. Resim";
             this.btnResim2.UseVisualStyleBackColor = true;
+            this.btnResim2.Click += new System.EventHandler(this.btnResim2_Click);
             // 
             // btnKarsilastir
             // 
@@ -84,32 +90,62 @@
             this.btnKarsilastir.TabIndex = 4;
             this.btnKarsilastir.Text = "Karşılaştır";
             this.btnKarsilastir.UseVisualStyleBackColor = true;
+            this.btnKarsilastir.Click += new System.EventHandler(this.btnKarsilastir_Click);
             // 
-            // label1
+            // lblSonuc
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(406, 391);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.lblSonuc.AutoSize = true;
+            this.lblSonuc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSonuc.Location = new System.Drawing.Point(402, 396);
+            this.lblSonuc.Name = "lblSonuc";
+            this.lblSonuc.Size = new System.Drawing.Size(70, 25);
+            this.lblSonuc.TabIndex = 5;
+            this.lblSonuc.Text = "label1";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.form1ToolStripMenuItem,
+            this.form2ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(890, 28);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // form1ToolStripMenuItem
+            // 
+            this.form1ToolStripMenuItem.Name = "form1ToolStripMenuItem";
+            this.form1ToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.form1ToolStripMenuItem.Text = "Form1";
+            this.form1ToolStripMenuItem.Click += new System.EventHandler(this.form1ToolStripMenuItem_Click);
+            // 
+            // form2ToolStripMenuItem
+            // 
+            this.form2ToolStripMenuItem.Name = "form2ToolStripMenuItem";
+            this.form2ToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.form2ToolStripMenuItem.Text = "Form2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 492);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblSonuc);
             this.Controls.Add(this.btnKarsilastir);
             this.Controls.Add(this.btnResim2);
             this.Controls.Add(this.btnResim1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,7 +158,10 @@
         private System.Windows.Forms.Button btnResim1;
         private System.Windows.Forms.Button btnResim2;
         private System.Windows.Forms.Button btnKarsilastir;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblSonuc;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem form1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem form2ToolStripMenuItem;
     }
 }
 
