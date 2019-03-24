@@ -5,10 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DeepAI;
+using ImageSimilarity.Model;
+using Newtonsoft.Json;
 
 namespace ImageSimilarity
 {
@@ -16,6 +20,7 @@ namespace ImageSimilarity
     {
         OpenFileDialog resim1 = new OpenFileDialog();
         OpenFileDialog resim2 = new OpenFileDialog();
+        DataContext db = new DataContext();
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +28,8 @@ namespace ImageSimilarity
 
         private void form1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
+             
+        } 
 
         private void btnResim1_Click(object sender, EventArgs e)
         {
@@ -67,5 +72,11 @@ namespace ImageSimilarity
             string gelen = api.objectAsJsonString(resp.output);
             lblSonuc.Text = api.objectAsJsonString(resp.output).ToString();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
+
 }
